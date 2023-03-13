@@ -4,6 +4,9 @@ node_modules
 tmp
 .DS_Store
 npm-debug.log
-
+.history
+.history/*
+.vscode
+.vscode/*
 # Don't force sha validation (it differs depending on the OS)
 package-lock.json
