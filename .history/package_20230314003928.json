@@ -1,7 +1,7 @@
 {
   "name": "igs-react-datetime",
-  "version": "0.0.1",
-  "description": "A lightweight but complete datetime picker React.js component inspeared from arqex/react-datetime package",
+  "version": "3.1.0",
+  "description": "A lightweight but complete datetime picker React.js component",
   "homepage": "https://github.com/chemseddine201/igs-react-datetime",
   "repository": {
     "type": "git",
