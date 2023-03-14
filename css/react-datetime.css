@@ -53,9 +53,9 @@
 }
 
 .rdtDay {
-  font-size: 0.82rem;
+  /* font-size: 0.82rem;
   font-weight:400;
-  -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box; 
   box-sizing: border-box;
   color: #393939;
   width: 14.2857143%;
@@ -64,8 +64,8 @@
   flex-basis: 14.2857143%;
   max-width: 33px;
   height: 33px;
-  line-height: 30px;
-  position: relative;
+  line-height: 30px; 
+  position: relative;*/
   background: transparent;
   border: 1px solid transparent;
   border-radius: 50%;
@@ -78,7 +78,6 @@
 .rdtDay.selectedDay:hover {
     background: #7367f0;
     background-color: #7367f0;
-    border-color: #7367f0;
     color: #fff;
 }
 
