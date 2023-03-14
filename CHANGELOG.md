@@ -12,3 +12,5 @@ remove `isValideDate` function.
 
 ## 1.0.5
 * Fix isValidDate function inclusive dates.
+## 1.0.8
+* Fix overflows when render the calendar and timepicker.

@@ -134,6 +134,20 @@ export default class Datetime extends React.Component {
 		);
 	}
 
+	findOverflows() {
+		const documentWidth = document.documentElement.offsetWidth;
+		document.querySelectorAll('.rdtPicker').forEach(element => {
+			const box = element.getBoundingClientRect();
+			if (box.left <= 0) {
+				element.style.removeProperty("right");
+				element.style.left = '5%';
+			} else if (box.right > documentWidth) {
+				element.style.removeProperty("left");
+				element.style.right = '5%';
+			}
+		});
+	}
+
 	renderView() {
 		return this.props.renderView( this.state.currentView, this._renderCalendar );
 	}
@@ -432,6 +446,9 @@ export default class Datetime extends React.Component {
 	_openCalendar = () => {
 		if ( this.isOpen() ) return;
 		this.setState({open: true}, this.props.onOpen );
+		setTimeout(() => {
+			this.findOverflows();
+		}, 130);
 	}
 
 	_closeCalendar = () => {
@@ -494,6 +511,7 @@ export default class Datetime extends React.Component {
 		}
 
 		this.checkTZ();
+
 	}
 
 	regenerateDates() {
