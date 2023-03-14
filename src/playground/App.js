@@ -23,25 +23,52 @@ class App extends React.Component {
 	render() {
 		console.log('minDate', this.state.minDate.format('YYYY-MM-DD'));
 		return (
-			<div>
-				<Datetime 
-					minDate={this.state.minDate}
-					maxDate={moment().add(1, 'years')}
-					lineThrough={false}
-					value={this.state.date}
-					onChange={(date) => {
-						this.setState({
-							date: date
-						});
-					}}
-					closeOnSelect={true}
-					timeFormat='HH:mm A'
-					dateFormat='YYYY-MM-DD'
-				/>
-				<button onClick={() => {
-					this.changeDate();
-				}}> Change Me</button>
-			</div>
+			<>
+				<div style={{
+					position: 'absolute',
+					left: -5
+				}}>
+					<Datetime 
+						minDate={this.state.minDate}
+						maxDate={moment().add(1, 'years')}
+						lineThrough={false}
+						value={this.state.date}
+						onChange={(date) => {
+							this.setState({
+								date: date
+							});
+						}}
+						closeOnSelect={true}
+						timeFormat='HH:mm A'
+						dateFormat='YYYY-MM-DD'
+					/>
+					<button onClick={() => {
+						this.changeDate();
+					}}> Change Me</button>
+				</div>
+				<div style={{
+					position: 'absolute',
+					right: -5
+				}}>
+					<Datetime 
+						minDate={this.state.minDate}
+						maxDate={moment().add(1, 'years')}
+						lineThrough={false}
+						value={this.state.date}
+						onChange={(date) => {
+							this.setState({
+								date: date
+							});
+						}}
+						closeOnSelect={true}
+						timeFormat='HH:mm A'
+						dateFormat='YYYY-MM-DD'
+					/>
+					<button onClick={() => {
+						this.changeDate();
+					}}> Change Me</button>
+				</div>
+			</>
 		);
 	}
 }

@@ -139,10 +139,10 @@ export default class Datetime extends React.Component {
 		document.querySelectorAll('.rdtPicker').forEach(element => {
 			const box = element.getBoundingClientRect();
 			if (box.left <= 0) {
-				element.style.removeProperty("right");
+				element.style.removeProperty('right');
 				element.style.left = '5%';
 			} else if (box.right > documentWidth) {
-				element.style.removeProperty("left");
+				element.style.removeProperty('left');
 				element.style.right = '5%';
 			}
 		});
@@ -448,7 +448,7 @@ export default class Datetime extends React.Component {
 		this.setState({open: true}, this.props.onOpen );
 		setTimeout(() => {
 			this.findOverflows();
-		}, 130);
+		}, 10);
 	}
 
 	_closeCalendar = () => {
