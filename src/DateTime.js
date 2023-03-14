@@ -148,11 +148,11 @@ export default class Datetime extends React.Component {
 			selectedDate: this.getSelectedDate(),
 			isValidDate: (currentDate) => {
 				if (props.minDate && props.maxDate) {
-					return (currentDate).isBetween(props.minDate, props.maxDate);
+					return (currentDate).isBetween(props.minDate, props.maxDate, null, '[]');
 				} else if (props.minDate) {
-					return (currentDate).isAfter(props.minDate);
+					return (currentDate).isSameOrAfter(props.minDate);
 				} else if (props.maxDate) {
-					return (currentDate).isBefore(props.maxDate);
+					return (currentDate).isSameOrBefore(props.maxDate);
 				}
 				return true;
 			},
