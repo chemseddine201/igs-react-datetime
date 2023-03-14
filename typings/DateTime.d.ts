@@ -221,6 +221,8 @@ declare namespace ReactDatetimeClass {
         selectedDate: Moment;
         inputValue: string;
         open: boolean;
+        minDate: Date | Moment | null,
+        maxDate: Date | Moment | null,
     }
 }
 

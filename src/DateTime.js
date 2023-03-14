@@ -147,12 +147,12 @@ export default class Datetime extends React.Component {
 			viewDate: viewDate,
 			selectedDate: this.getSelectedDate(),
 			isValidDate: (currentDate) => {
-				if (state.minDate && state.maxDate) {
-					return (currentDate).isBetween(state.minDate, state.maxDate);
-				} else if (state.minDate) {
-					return (currentDate).isAfter(state.minDate);
-				} else if (state.maxDate) {
-					return (currentDate).isBefore(state.maxDate);
+				if (props.minDate && props.maxDate) {
+					return (currentDate).isBetween(props.minDate, props.maxDate);
+				} else if (props.minDate) {
+					return (currentDate).isAfter(props.minDate);
+				} else if (props.maxDate) {
+					return (currentDate).isBefore(props.maxDate);
 				}
 				return true;
 			},
@@ -162,8 +162,8 @@ export default class Datetime extends React.Component {
 			showView: this._showView,
 			prevIcon: props.prevIcon,
 			nextIcon: props.nextIcon,
-			minDate: state.minDate,
-			maxDate: state.maxDate,
+			minDate: props.minDate,
+			maxDate: props.maxDate,
 			lineThrough: props.lineThrough,
 		};
 

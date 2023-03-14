@@ -10,14 +10,22 @@ import moment from 'moment';
 
 class App extends React.Component { 
 	state = {
-		date: new Date()
+		date: new Date(),
+		minDate: moment().subtract(5, 'days')
+	}
+
+	changeDate = () => {
+		this.setState({
+			mindate: this.state.minDate.add(1, 'days')
+		});
 	}
 	
 	render() {
+		console.log('minDate', this.state.minDate.format('YYYY-MM-DD'));
 		return (
 			<div>
 				<Datetime 
-					minDate={moment().subtract(2, 'years')}
+					minDate={this.state.minDate}
 					maxDate={moment().add(1, 'years')}
 					lineThrough={false}
 					value={this.state.date}
@@ -30,6 +38,9 @@ class App extends React.Component {
 					timeFormat='HH:mm A'
 					dateFormat='YYYY-MM-DD'
 				/>
+				<button onClick={() => {
+					this.changeDate();
+				}}> Change Me</button>
 			</div>
 		);
 	}
