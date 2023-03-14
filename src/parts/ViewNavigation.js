@@ -14,8 +14,6 @@ export default function ViewNavigation( {
 	maxDate,
 	...props
 } ) {
-	//console.log(viewDate.format('YYYY-MM-DD'), maxDate.format('YYYY-MM-DD'), viewDate.isBefore(maxDate));
-	//console.log(viewDate.format('YYYY-MM-DD'), minDate.format('YYYY-MM-DD'), viewDate.isAfter(minDate));
 	return (
 		<tr>
 			{(!minDate || viewDate.endOf('month').isAfter(minDate)) ? (<th className="rdtPrev" onClick={ onClickPrev }>

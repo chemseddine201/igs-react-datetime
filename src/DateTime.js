@@ -147,7 +147,6 @@ export default class Datetime extends React.Component {
 			viewDate: viewDate,
 			selectedDate: this.getSelectedDate(),
 			isValidDate: (currentDate) => {
-				console.log(currentDate.format('YYYY-MM-DD'));
 				if (state.minDate && state.maxDate) {
 					return (currentDate).isBetween(state.minDate, state.maxDate);
 				} else if (state.minDate) {
